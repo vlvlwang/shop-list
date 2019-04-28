@@ -4,15 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>某宝商品管理系统</title>
+    <title>某宝商品管理系统--让您的每一天都happy</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div></div>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                <a class="navbar-brand" href="#">某宝商品管理系统</a>
+                </div>
+            
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">其他页面</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#" >注册</a></li>
+                </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container">
+            <button type="button" class="btn btn-primary">商品入库</button>
+            <table class="table table-striped table-bordered table-list">
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th>库存</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>1</td>
+                        <td>口红</td>
+                        <td>
+                            <span>300</span>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <span>2</span>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-edit btn-success btn-xs">编辑</button>
+                            <button type="button" class="btn btn-del btn-danger btn-xs">删除</button>
+                            <button type="button" class="btn btn-ok btn-info btn-xs">确认</button>
+                            <button type="button" class="btn btn-cancel btn-warning btn-xs">取消</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>时光能量</td>
+                        <td>
+                            <span>800</span>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <span>1</span>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-edit btn-success btn-xs">编辑</button>
+                            <button type="button" class="btn btn-del btn-danger btn-xs">删除</button>
+                            <button type="button" class="btn btn-ok btn-info btn-xs">确认</button>
+                            <button type="button" class="btn btn-cancel btn-warning btn-xs">取消</button>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>眉笔</td>
+                            <td>
+                                <span>210</span>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <span>3</span>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-edit btn-success btn-xs">编辑</button>
+                                <button type="button" class="btn btn-del btn-danger btn-xs">删除</button>
+                                <button type="button" class="btn btn-ok btn-info btn-xs">确认</button>
+                                <button type="button" class="btn btn-cancel btn-warning btn-xs">取消</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>套刷</td>
+                            <td>
+                                <span>200</span>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <span>2</span>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-edit btn-success btn-xs">编辑</button>
+                                <button type="button" class="btn btn-del btn-danger btn-xs">删除</button>
+                                <button type="button" class="btn btn-ok btn-info btn-xs">确认</button>
+                                <button type="button" class="btn btn-cancel btn-warning btn-xs">取消</button>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+       
     <script>
-        function fn(a){
-            console.log(a);
-        }
-        fn(5);
+      
     </script>
 </body>
 </html>

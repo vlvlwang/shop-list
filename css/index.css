@@ -1,0 +1,24 @@
+.btn-primary{
+    margin-bottom: 50px;
+}
+.table-list{ 
+    table-layout: fixed;  /* 固定列宽 */
+}
+.table-list input{
+    display: none;  /* 隐藏 价格/数量 的编辑框 */
+}
+.table-list .btn-ok, .table-list .btn-cancel {
+    display: none;  /* 隐藏 确认/取消 按钮*/
+}
+.edit .btn-ok, .edit .btn-cancel{
+    display: inline-block;  /* 行内块 横向排列*/
+}
+.edit .btn-edit, .edit .btn-del{
+    display: none;  /* 点击编辑后，隐藏 编辑/删除按钮 ，出现确认/取消按钮 */
+}
+.edit span{
+    display: none;  /* 编辑/删除按钮 对应的span 也隐藏*/
+}
+.edit input{
+    display: inline-block; /* 编辑框显示 */
+}
