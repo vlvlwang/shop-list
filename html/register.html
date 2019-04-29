@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>某宝商品管理—注册</title>
+    <style>
+        .form-container .checkbox .text-primary{
+            margin-left: -20px !important;
+        }
+    </style>
     <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/form.css">
 </head>
@@ -26,8 +31,7 @@
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
-                <label>
-                <input type="checkbox"> 七天免登陆
+                <label> 
                 <span class="text-primary">已有账号？</span><a href="login.html" class="text-danger">去登录</a>
                 </label>
                 <span></span>
@@ -36,9 +40,12 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">注册</button>
+                <!--  按钮type属性改为 type="button" ，也可阻止默认提交 -->
+                <button id="btn" type="submit" class="btn btn-default">注册</button>
             </div>
         </div>
     </form>
+    <script src="../libs/tools.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 </html>
