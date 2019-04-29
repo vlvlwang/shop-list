@@ -57,14 +57,32 @@ class EditTable {
     }
     okBtnClick(tr){
     // 编辑修改确认之前，要先发送后端，(这里修改，数据库也要修改)
-        Array.from(tr.querySelectorAll("span")).forEach(span=>{
-            span.innerHTML = span.nextElementSibling.value;
-
-
+    // 首先的获取到修改后的价格和库存,给input添加class名来获取
+    // 找到tr中的 inputPrice / inputNum
+    let inputPrice = tr.querySelector(".inputPrice"),
+        inputNum = tr.querySelector(".inputNum"),
+        price = inputPrice.value, // 获取到修改后的值
+        num = inputNum.value,
+        id = tr.getAttribute("data-id");  // 找到tr上的自定义属性 id
+    //向后端发送更新请求
+        tools.ajaxGetPromise("api/v1/ok.php",{id, price, num}).then(data =>{
+            if(data.res_code === 1){
+                alert(data.res_message);
+                //换种写法
+                inputPrice.previousElementSibling.innerHTML = inputPrice.value;  //input的value值赋给input上一个兄弟元素（即span）
+                inputNum.previousElementSibling.innerHTML = inputNum.value;
+                //给tr移除edit 显示编辑/删除
+                tr.classList.remove("edit");
+            }else{
+                alert(data.res_message);
+                //给tr移除edit 显示编辑/删除
+                tr.classList.remove("edit");
+            }
         })
-        
-        //给tr移除edit 显示编辑/删除
-        tr.classList.remove("edit");
+        //原始写法
+        // Array.from(tr.querySelectorAll("span")).forEach(span=>{
+            // span.innerHTML = span.nextElementSibling.value;
+        // })       
     }
     cancelBtnClick(tr){
         //给tr移除edit 显示编辑/删除

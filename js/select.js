@@ -30,11 +30,11 @@ class SelectList{
                 <td>${shop.name}</td>
                 <td>
                     <span>${shop.price}</span>
-                    <input type="text">
+                    <input type="text" class="inputPrice">
                 </td>
                 <td>
                     <span>${shop.num}</span>
-                    <input type="text">
+                    <input type="text" class="inputNum">
                 </td>
                 <td>
                     <button type="button" class="btn btn-edit btn-success btn-xs">编辑</button>
