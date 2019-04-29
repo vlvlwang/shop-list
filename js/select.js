@@ -1,4 +1,4 @@
-// 发送一个ajax请求，得到所有商品，进行渲染。 查询js
+// 发送一个ajax请求，得到所有商品，进行渲染列表表格信息。 查询js
 // 写法：面向对象
 class SelectList{
     constructor(tbody){
@@ -46,4 +46,5 @@ class SelectList{
             this.tbody.innerHTML = html; //把拼接好的字符串 放到tbody中去
         }
     }
-new SelectList(tbody);
+let getShop = new SelectList(tbody);  
+//用一个变量来接new 的这个实例，可以被调用，类似于tools

@@ -38,8 +38,9 @@ class EditTable {
     } 
     delBtnClick(tr){
         if(confirm("确定要删除吗？")){
-        // 发送后台，数据库的数据也需要删除
-            tr.remove();
+        // 发送后台，数据库的数据删除了,在删除列表上的tr信息
+
+            // tr.remove();
         }
         
     }
