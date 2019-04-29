@@ -22,10 +22,11 @@ class SelectList{
         // 渲染
         render(list){
             let html="";  // 用一个空字符串来接收
-            list.forEach(shop => {
-            //用模板字符串拼接
-                html +=`<tr>
-                <td>${shop.id}</td>
+            list.forEach((shop,index) => {
+            //用模板字符串拼接 tr上取到的是id
+            //用户看到的是列表的序号，序号 = 下标 + 1
+                html +=`<tr data-id="${shop.id}"> 
+                <td>${index + 1}</td>
                 <td>${shop.name}</td>
                 <td>
                     <span>${shop.price}</span>

@@ -98,8 +98,24 @@
 
 - data : {
 
-  ​	res_code : 1, // 1代表添加成功，0代表失败
+  ​	res_code : 1, // 1代表删除成功，0代表失败
 
   ​	res_message:   "删除成功"  ||  "网络错误，删除失败，请重试"。—— "告诉成功与否"
+
+  }
+
+#####  4.编辑商品确认接口 —— editTable.js
+
+- url : api/v1/ok.php
+
+- method : get 
+
+- query : {id, price, num} 传参
+
+- data : {
+
+  ​	res_code : 1, // 1代表修改成功，0代表失败
+
+  ​	res_message:   "更新成功"  ||  "网络错误，更新失败，请重试"。—— "告诉成功与否"
 
   }
