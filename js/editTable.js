@@ -6,15 +6,17 @@ class EditTable {
     }
     bindEvents(){
         this.tbody.onclick = e =>{
-            // e = e || event;
-            // e.target || e.srcElement;
+        // 事件源兼容
+            e = e || event;
+            e.target || e.srcElement;
             let target = e.target;
             let tr = target.parentNode.parentNode; // 找到事件源的父级的父级 tr
             let classList =Array.from (target.classList);
+        //通过classlist 数组来判断 是否包含该class名
             console.log(classList);
         // includes 包含
             if(classList.includes("btn-edit")){
-                this.editBtnClick(tr);
+                this.editBtnClick(tr); // 调用 函数方法
             }else if(classList.includes("btn-del")){
                 this.delBtnClick(tr);
             }else if(classList.includes("btn-ok")){
@@ -26,8 +28,8 @@ class EditTable {
     }
     // 函数方法 
     editBtnClick(tr){
-        // 在tr上找到span，值赋给对应的input
-        // let aSpan = Array.from(tr.querySelectorAll("sapn")); // 循环遍历它
+        // 在tr上找到span,值赋给对应的input
+        // let aSpan = Array.from(tr.querySelectorAll("span")); // 循环遍历它
         Array.from(tr.querySelectorAll("span")).forEach(span=>{
             span.nextElementSibling.value = span.innerHTML;
         })
@@ -46,10 +48,11 @@ class EditTable {
         Array.from(tr.querySelectorAll("span")).forEach(span=>{
             span.innerHTML = span.nextElementSibling.value;
         })
-        //给tr删除edit
+        //给tr移除edit 显示编辑/删除
         tr.classList.remove("edit");
     }
     cancelBtnClick(tr){
+        //给tr移除edit 显示编辑/删除
         tr.classList.remove("edit");
     }
 }
