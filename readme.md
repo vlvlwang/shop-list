@@ -140,3 +140,19 @@
   ​	res_message:   "注册成功"  ||  "网络错误，注册失败，请重试"。—— "告诉成功与否"
 
   }
+
+#####  6.登录接口 —— login.js
+
+- url : api/v1/login.php
+
+- method : post 
+
+- query : {name,password} 传参
+
+- data : {
+
+  ​	res_code : 1, // 1代表登录成功，0代表失败
+
+  ​	res_message:   "登录成功"  ||  "用户名或密码错误"。—— "告诉成功与否"
+
+  }

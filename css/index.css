@@ -22,3 +22,6 @@
 .edit input{
     display: inline-block; /* 编辑框显示 */
 }
+.hidden{
+    display: none;
+}

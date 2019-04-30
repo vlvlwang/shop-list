@@ -23,9 +23,14 @@
                 <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
                 <li><a href="#">其他页面</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" id="unlogin-ul">
                 <li><a href="html/login.html">登录</a></li>
                 <li><a href="html/register.html" >注册</a></li>
+            </ul>
+            <!-- 登录跳转后 -->
+            <ul class="nav navbar-nav navbar-right hidden" id="login-ul">
+                <li><a href="javascript:;">欢迎您 ! <span id="name-span"></span></a></li>
+                <li><a href="javascript:;" >退出</a></li>
             </ul>
             </div> <!-- /.navbar-collapse -->
         </div> <!-- /.container-fluid -->
@@ -161,6 +166,7 @@
 
     <script src="js/select.js"></script>   
     <script src="js/editTable.js"></script>
-    <script src="js/shopAdd.js"></script>
+    <script src="js/shopAdd.js"></script>    
+    <script src="js/islogin.js"></script>
 </body>
 </html>
