@@ -28,7 +28,8 @@ class SelectList{
                 this.render(data.res_body.data); 
                 this.pageCount = data.res_body.pageCount; //当前的总页数 = 后台的总页数
             // 根据总页数渲染分页，当前处于第几页
-                pagination.render(this.pageCount,this.pageIndex);  //调用渲染页码的js,传参页数，和当前页
+                pagination.render(this);    // this就是new的select这个实例，因为渲染页码 要用到很多select中的东西，所以就全部传进去。传的this是一个引用类型
+                // pagination.render(this.pageCount,this.pageIndex);  //调用渲染页码的js,传参页数，和当前页
             }else{
             // 如果查询失败，弹出失败信息
                 alert(data.res_massage);
